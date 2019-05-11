@@ -1,0 +1,32 @@
+<!--miniprogram/pages/personalInfo/personalInfo.wxml-->
+<view class='container'>
+  <view class='title'>
+    <text>个人信息</text>
+  </view>
+
+  <view class='mainListContainer'>
+    <view>
+      <text>用户ID:</text>
+    </view>
+    <view>
+      <text class='id'>{{userId}}</text>
+    </view>
+  </view>
+
+  <view class='mainListContainer'>
+    <view class='mainListText'>用户名</view>
+    <input class="border-input" placeholder='{{userName}}' maxlength='25' bindinput='newNameInput'></input>
+  </view>
+
+  <view class='mainListContainer'>
+    <view class='mainListText'>电话号码</view>
+    <input class="border-input" placeholder='{{userPhoneNumber}}' maxlength='11' bindinput='newPhoneNumberInput'></input>
+  </view>
+
+  <view class='mainListContainer'>
+    <view class='mainListText'>电子邮箱</view>
+    <input class="border-input" placeholder='{{userEmail}}' maxlength='25' bindinput='newEmailInput'></input>
+  </view>
+
+  <button class='modify' bindtap='modifyPersonalInfo'>保存</button>
+</view>

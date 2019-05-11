@@ -1,0 +1,19 @@
+<!--miniprogram/pages/registration/registration.wxml-->
+<view class="container">
+  <text>欢迎使用交大日历</text>
+  <view class='mainListContainer'>
+    <view class='mainListText'>用户名</view>
+    <input class="border-input" placeholder='请输入用户名' maxlength='25' bindinput='bindNameInput'></input>
+  </view>
+
+  <view class='mainListContainer'>
+    <view class='mainListText'>密码</view>
+    <input class='border-input' placeholder='请输入密码' password='true' maxlength='14' bindinput='bindPasswordInput'></input>
+  </view>
+
+  <view class='bindingContainer'>
+    <button class='binding' bindtap='bindingSuccess'>登录</button>
+  </view>
+
+  <button class='nextButton' bindtap='registerTap'>注册</button>
+</view>

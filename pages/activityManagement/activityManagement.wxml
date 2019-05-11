@@ -1,0 +1,30 @@
+<!--miniprogram/pages/activityManagement/activityManagement.wxml-->
+<view class="container">
+  <view class="uploader">
+    <navigator url="../scheduleDisplay/scheduleDisplay" open-type="navigate" class="uploader-text">
+      <text>我的日程表</text>
+    </navigator>
+  </view>
+
+  <!-- 查看校园活动 -->
+  <view class="uploader">
+    <navigator url="../campusActivity/campusActivity" open-type="navigate" class="uploader-text">
+      <text>查看校园活动</text>
+    </navigator>
+  </view>
+
+  <!-- 关注的活动 -->
+  <view class="uploader">
+    <navigator url="../favoriteActivity/favoriteActivity" open-type="navigate" class="uploader-text">
+      <text>查看我关注的活动</text>
+    </navigator>
+  </view>
+
+  <!-- 添加活动信息 -->
+  <view class="uploader">
+    <navigator url="../activityInfo/activityInfo" open-type="navigate" class="uploader-text">
+      <text>添加活动信息</text>
+    </navigator>
+  </view>
+
+</view>

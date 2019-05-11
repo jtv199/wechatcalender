@@ -1,0 +1,8 @@
+/* miniprogram/pages/personalInfo/personalInfo.wxss */
+.border-input{
+  border:1px solid #ccc;
+}
+
+.id{
+  font-size:35rpx;
+}

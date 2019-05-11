@@ -1,0 +1,13 @@
+/* miniprogram/pages/login/login.wxss */
+.border-input{
+  border:1px solid #ccc;
+}
+
+.login{
+  margin:80rpx;
+}
+
+.register{
+  
+  margin:100rpx;
+}
