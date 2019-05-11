@@ -1,6 +1,6 @@
 <!--miniprogram/pages/courseInfo/courseInfo.wxml-->
 <view class='container'>
-  <form bindsubmit="formSubmit">
+  <form bindsubmit="addcourse">
    <view class='section'>
      <view class='section-title'>课程名称</view>
      <input class="border-input" bindinput='courseNameInput'></input>
@@ -35,5 +35,8 @@
      <view class='section-title'>结束时间</view>
      <picker bindchange='et' value='end1' range='{{endtime}}'>当前选择:{{end1}}</picker>
      </view>
+     <view class='section'>
+      <button type='warn' formType='submit' plain>Submit</button>
+      </view>
   </form>
 </view>

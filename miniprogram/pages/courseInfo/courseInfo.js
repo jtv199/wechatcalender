@@ -14,7 +14,7 @@ Page({
     courseSite:'',
     courseBegin:0,
     courseEnd:1,
-    weekday:0,
+    weekday:1,
     userId:'',
     array:['东上院','东中院','东下院','上院','中院','下院'],
     index:0,
@@ -84,6 +84,50 @@ Page({
   courseSiteInput:function(e){
     this.setData({
       courseSite:e.detail.value
+    })
+  },
+  addcourse: function () {
+    var d=this.data;
+    var userId=d.userId;
+    var courseName=d.courseName;
+    var courseSite=d.courseSite;
+    var weekday=d.weekday;
+    var weeks=[];
+    for (var i=0;i<16;++i){
+      if (d.weeks[i]==1)
+       weeks.push(i+1)
+    }
+    var begin=d.begin;
+    var end=d.end;
+    var that = this;
+    wx.cloud.init({
+      env: 'jstu-calendar-bcbe6b',
+      traceUser: true
+    });
+    const db = wx.cloud.database();
+    db.collection('courseInformation').add({
+      data: {
+        userId:userId,
+        courseName:courseName,
+        courseSite:courseSite,
+        weekday:weekday,
+        weeks:weeks,
+        begin:begin,
+        end:end,
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '课程添加成功',
+          icon: 'success',
+          duration: 2000,
+          mask: true
+        })
+        console.log(res);
+        console.log(res.errMsg);
+      }
+    })
+    wx.switchTab({
+      url: '../courseManagement/courseManagement',
     })
   },
 
