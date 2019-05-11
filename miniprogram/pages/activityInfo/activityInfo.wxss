@@ -1,0 +1,4 @@
+/* miniprogram/pages/activityInfo/activityInfo.wxss */
+.border-input{
+  border:1px solid #ccc;
+}

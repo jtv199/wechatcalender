@@ -1,0 +1,22 @@
+<!--miniprogram/pages/activityInfo/activityInfo.wxml-->
+<view class='container'>
+  <view class='section'>
+    <view class='section-title'>活动名称</view>
+    <input class="border-input" bindinput='activityNameInput'></input>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>活动地点</view>
+    <input class="border-input" bindinput='activitySiteInput'></input>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>活动日期</view>
+    <input class='border-input' placeholder='8位数字(如20190101)'  maxlength='8' bindinput='activityDateInput'></input>
+  </view>
+
+  <view class='confirmContainer'>
+    <button class='confirm' bindtap='addingSuccessTap'>添加活动</button>
+  </view>
+
+</view>

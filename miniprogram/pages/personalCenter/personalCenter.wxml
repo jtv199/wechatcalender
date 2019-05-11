@@ -1,0 +1,30 @@
+<!--miniprogram/pages/personalInfo/personalInfo.wxml-->
+<view class="container">
+  <view class='userinfo'>
+    <button 
+      open-type="getUserInfo" 
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      bindtap='uploadPicture'
+    ></button>
+    <text>{{userName}}</text>
+
+  </view>
+
+  <view class="uploader">
+    <navigator url="../personalInfo/personalInfo" open-type="navigate" class="uploader-text">
+      <text>修改个人信息</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../setReminder/setReminder" open-type="navigate" class="uploader-text">
+      <text>提醒设置</text>
+    </navigator>
+  </view>
+
+  <button class='logout'size='default' type='warn' bindtap='logOut'>注销</button>
+
+  
+
+</view>
