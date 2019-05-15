@@ -1,0 +1,12 @@
+<!--miniprogram/pages/scheduleDisplay/scheduleDisplay.wxml-->
+<view class='container'>
+  <view class='section'>
+    <view class='section-title'>请选择要查看的周次</view>
+    <picker bindchange='bindPickerChange' value="{{index}}" range="{{array}}">
+      <view class='picker'>
+         当前选择:第{{array[index]}}周
+      </view>
+    </picker>
+  </view>
+
+</view>

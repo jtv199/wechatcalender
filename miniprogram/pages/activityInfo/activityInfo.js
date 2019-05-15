@@ -8,7 +8,14 @@ Page({
   data: {
     activityName:'',
     activitySite:'',
-    activityDate:''
+    beginDateDisplay:'',
+    beginDate:'',
+    beginTimeDisplay:'',
+    beginTime:'',
+    endDateDisplay:'',
+    endDate:'',
+    endTimeDisplay:'',
+    endTime:''
   },
 
   activityNameInput:function(e){
@@ -23,16 +30,60 @@ Page({
     })
   },
 
-  activityDateInput:function(e){
+  handleBeginDateChange(e) {
+    console.log(e.detail.value)
+    let [year, month, day] = e.detail.value.split('-')
+    var beginDate=parseInt(year)*10000+parseInt(month)*100+parseInt(day)
+    console.log(typeof beginDate)
     this.setData({
-      activityDate:e.detail.value
+      beginDate: beginDate,
+      beginDateDisplay:e.detail.value
     })
+    console.log(this.data.beginDate)
+  },
+
+  handleBeginTimeChange(e) {
+    let [hour, minute] = e.detail.value.split(':')
+    var beginTime=parseInt(hour)*100+parseInt(minute)
+    this.setData({
+      beginTime: beginTime,
+      beginTimeDisplay:e.detail.value
+    })
+    console.log(this.data.beginTime)
+  },
+
+  handleEndDateChange(e) {
+    console.log(e.detail.value)
+    let [year, month, day] = e.detail.value.split('-')
+    var endDate = parseInt(year) * 10000 + parseInt(month) * 100 + parseInt(day)
+    this.setData({
+      endDate: endDate,
+      endDateDisplay:e.detail.value
+    })
+    console.log(this.data.endDate)
+  },
+
+  handleEndTimeChange(e) {
+    let [hour, minute] = e.detail.value.split(':')
+    var endTime=parseInt(hour)*100+parseInt(minute)
+    this.setData({
+      endTime: endTime,
+      endTimeDisplay:e.detail.value
+    })
+    console.log(this.data.endTime)
   },
 
   addingSuccessTap:function(){
     var activityName=this.data.activityName;
     var activitySite=this.data.activitySite;
-    var activityDate=this.data.activityDate;
+    var beginDateDisplay=this.data.beginDateDisplay;
+    var beginDate=this.data.beginDate;
+    var beginTimeDisplay=this.data.beginTimeDisplay;
+    var beginTime=this.data.beginTime;
+    var endDateDisplay=this.data.endDateDisplay;
+    var endDate=this.data.endDate;
+    var endTimeDisplay=this.data.endTimeDisplay;
+    var endTime=this.data.endTime;
     var userId=app.appData.userId.userId;
     var that=this;
     wx.cloud.init({
@@ -44,7 +95,14 @@ Page({
       data:{
         activityName:activityName,
         activitySite:activitySite,
-        activityDate:activityDate,
+        beginDateDisplay:beginDateDisplay,
+        beginDate:beginDate,
+        beginTimeDisplay:beginTimeDisplay,
+        beginTime:beginTime,
+        endDateDisplay:endDateDisplay,
+        endDate:endDate,
+        endTimeDisplay:endTimeDisplay,
+        endTime:endTime,
         userId:userId
       },
       success: function (res) {

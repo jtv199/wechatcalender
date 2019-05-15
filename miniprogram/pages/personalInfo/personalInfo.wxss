@@ -2,7 +2,21 @@
 .border-input{
   border:1px solid #ccc;
 }
+.section {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px dashed #eee;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #444;
+}
 
-.id{
-  font-size:35rpx;
+.section-title {
+  display: block;
+  color: #000;
+  white-space: nowrap;
+  /* min-width: 100rpx; */
+  /* max-width: 150rpx; */
+  width: 150rpx;
+  text-align: center;
 }

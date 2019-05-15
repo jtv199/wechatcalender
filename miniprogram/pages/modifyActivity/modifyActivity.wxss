@@ -1,0 +1,65 @@
+/* miniprogram/pages/modifyActivity/modifyActivity.wxss */
+
+.section {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px dashed #eee;
+  padding: 30rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.section-title {
+  display: block;
+  color: #000;
+  white-space: nowrap;
+  /* min-width: 100rpx; */
+  /* max-width: 150rpx; */
+  width: 150rpx;
+  text-align: center;
+}
+
+
+
+.date-picker {
+  flex: 8;
+  padding: 0 0 0 32rpx;
+  font-size: 32rpx;
+}
+
+.time-picker {
+  flex: 8;
+  padding: 0 0 0 32rpx;
+  font-size: 32rpx;
+}
+
+.begin_date{
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.begin_time {
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.end_date {
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+.end_time {
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  text-align: center;
+}
+
+.border-input{
+  border:1px solid #ccc;
+}

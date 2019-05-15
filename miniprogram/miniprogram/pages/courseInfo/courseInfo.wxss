@@ -1,0 +1,4 @@
+/* miniprogram/pages/courseInfo/courseInfo.wxss */
+.border-input{
+  border:1px solid #ccc;
+}

@@ -1,0 +1,9 @@
+<!--miniprogram/pages/festivalDetail/festivalDetail.wxml-->
+<view class='container'>
+  <view>
+    <text>{{festivalName}}简介</text>
+  </view>
+  <view>
+    <text>{{festivalIntroduction}}</text>
+  </view>
+</view>

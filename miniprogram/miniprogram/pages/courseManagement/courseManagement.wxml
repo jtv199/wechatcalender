@@ -1,0 +1,16 @@
+<!--miniprogram/pages/courseManagement/courseManagement.wxml-->
+<view class="container">
+  <view class="uploader">
+    <navigator url="../coursetableDisplay/coursetableDisplay" open-type="navigate" class="uploader-text">
+      <text>我的课程表</text>
+    </navigator>
+  </view>
+
+  <!-- 添加课程信息 -->
+  <view class="uploader">
+    <navigator url="../courseInfo/courseInfo" open-type="navigate" class="uploader-text">
+      <text>添加课程信息</text>
+    </navigator>
+  </view>
+
+</view>

@@ -1,0 +1,52 @@
+<!--miniprogram/pages/modifyActivity/modifyActivity.wxml-->
+<view class='container'>
+  <view class='section'>
+    <view class='section-title'>活动名称</view>
+    <input class="border-input" bindinput='activityNameInput' placeholder='{{defaultActivityName}}'></input>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>活动地点</view>
+    <input class="border-input" bindinput='activitySiteInput' placeholder='{{defaultActivitySite}}'></input>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>开始时间</view>
+
+    <view class='date-picker'>
+      <picker class="begin_date" mode="date" value='{{defaultBeginDate}}' bindchange="handleBeginDateChange">
+        {{beginDateDisplay ? beginDateDisplay:"日期"}}
+      </picker>
+    </view>
+
+    <view class='time-picker'>
+      <picker class="begin_time" mode="time" value='{{defaultBeginTime}}' bindchange="handleBeginTimeChange">
+        {{beginTimeDisplay ? beginTimeDisplay:"时间"}}
+      </picker>
+    </view>
+
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>结束时间</view>
+
+    <view class='date-picker'>
+      <picker class="end_date" mode="date" value='{{defaultEndDate}}' bindchange="handleEndDateChange">
+        {{endDateDisplay ? endDateDisplay:"日期"}}
+      </picker>
+    </view>
+
+    <view class='time-picker'>
+      <picker class="end_time" mode="time" value='{{defaultEndTime}}' bindchange="handleEndTimeChange">
+        {{endTimeDisplay ? endTimeDisplay:"时间"}}
+      </picker>
+    </view>
+
+  </view>
+
+  <view>
+    <button class='confirm' bindtap='saveChanges'>保存</button>
+  </view>
+
+
+</view>

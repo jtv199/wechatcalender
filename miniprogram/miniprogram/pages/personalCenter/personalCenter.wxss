@@ -1,0 +1,4 @@
+/* miniprogram/pages/personalInfo/personalInfo.wxss */
+
+
+@import "../../style/guide.wxss"

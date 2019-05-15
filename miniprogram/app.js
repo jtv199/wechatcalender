@@ -15,6 +15,7 @@ App({
       userId:null,
       iconPath:'',
       festivalInformation:null,
+      time:null
     }
 
     

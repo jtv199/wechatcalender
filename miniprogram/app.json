@@ -6,7 +6,9 @@
     "pages/personalCenter/personalCenter",
     "pages/activityManagement/activityManagement",
     "pages/courseManagement/courseManagement",
+    "pages/showcourse/showcourse",
     "pages/courseInfo/courseInfo",
+    "pages/modifycourse/modifycourse",
     "pages/activityInfo/activityInfo",
     "pages/campusActivity/campusActivity",
     "pages/favoriteActivity/favoriteActivity",
@@ -14,8 +16,14 @@
     "pages/personalInfo/personalInfo",
     "pages/coursetableDisplay/coursetableDisplay",
     "pages/scheduleDisplay/scheduleDisplay",
-    "pages/festivalDetail/festivalDetail"
+    "pages/festivalDetail/festivalDetail",
+    "pages/modifyActivity/modifyActivity"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -24,34 +32,34 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#000",
-    "selectedColor": "#56abe4",
+    "color": "black",
+    "selectedColor": "#32CD32",
     "backgroundColor": "#fff",
     "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/hotest.png",
-        "selectedIconPath": "images/hotest_on.png"
+        "iconPath": "images/homepage_black.png",
+        "selectedIconPath": "images/homepage_green.png"
       },
       {
         "pagePath": "pages/courseManagement/courseManagement",
         "text": "课程管理",
-        "iconPath": "images/latest.png",
-        "selectedIconPath": "images/lastest_on.png"
+        "iconPath": "images/note_black.png",
+        "selectedIconPath": "images/note_green.png"
       },
       {
         "pagePath": "pages/activityManagement/activityManagement",
         "text": "活动管理",
-        "iconPath": "images/latest.png",
-        "selectedIconPath": "images/lastest_on.png"
+        "iconPath": "images/activity_black.png",
+        "selectedIconPath": "images/activity_green.png"
       },
       {
         "pagePath": "pages/personalCenter/personalCenter",
         "text": "个人中心",
-        "iconPath": "images/hotest.png",
-        "selectedIconPath": "images/hotest_on.png"
+        "iconPath": "images/people_black.png",
+        "selectedIconPath": "images/people_green.png"
       }
     ]
   },

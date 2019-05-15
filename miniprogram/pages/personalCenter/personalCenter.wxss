@@ -1,4 +1,11 @@
 /* miniprogram/pages/personalInfo/personalInfo.wxss */
-
+.logout{
+  position: fixed;
+  bottom: 5%;
+  right: 16%;
+  width:500rpx;
+  height: 90rpx;
+  text-align: center;
+}
 
 @import "../../style/guide.wxss"

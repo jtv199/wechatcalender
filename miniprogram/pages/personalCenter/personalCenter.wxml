@@ -23,8 +23,10 @@
     </navigator>
   </view>
 
-  <button class='logout'size='default' type='warn' bindtap='logOut'>注销</button>
+  
 
   
 
 </view>
+
+<button class='logout'size='default' type='warn' bindtap='logOut'>注销</button>

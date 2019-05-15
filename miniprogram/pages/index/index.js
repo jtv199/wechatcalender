@@ -1,6 +1,7 @@
 // miniprogram/pages/main/main.js
 var util=require('../../utils/util.js')
 var app=getApp()
+var amapFile = require('../../utils/amap-wx.js');
 Page({
 
   /**
@@ -11,7 +12,8 @@ Page({
     month:'',
     day:'',
     festivalName:'',
-    festivalWish:''
+    festivalWish:'',
+
   },
 
   /**
@@ -36,6 +38,7 @@ Page({
       festivalWish:festivalWish
     })
     console.log(time)
+
   },
 
   /**

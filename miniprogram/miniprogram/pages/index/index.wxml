@@ -1,0 +1,9 @@
+<!--miniprogram/pages/main/main.wxml-->
+<view class="container">
+  <text>今天是{{year}}年{{month}}月{{day}}日</text>
+  <navigator class='press' url='../festivalDetail/festivalDetail' hover-class="navigator-hover">{{festivalName}}</navigator>
+  <view>
+    <text>{{festivalWish}}</text>
+  </view>
+
+</view>

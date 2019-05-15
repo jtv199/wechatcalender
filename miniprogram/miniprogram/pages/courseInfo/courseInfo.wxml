@@ -1,0 +1,13 @@
+<!--miniprogram/pages/courseInfo/courseInfo.wxml-->
+<view class='container'>
+  <view class='section'>
+    <view class='section-title'>课程名称</view>
+    <input class="border-input" bindinput='courseNameInput'></input>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>课程地点</view>
+    <input class="border-input" bindinput='courseSiteInput'></input>
+  </view>
+
+</view>

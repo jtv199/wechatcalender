@@ -11,8 +11,37 @@
   </view>
 
   <view class='section'>
-    <view class='section-title'>活动日期</view>
-    <input class='border-input' placeholder='8位数字(如20190101)'  maxlength='8' bindinput='activityDateInput'></input>
+    <view class='section-title'>开始时间</view>
+
+    <view class='date-picker'>
+      <picker class="begin_date" mode="date" bindchange="handleBeginDateChange">
+        {{beginDateDisplay ? beginDateDisplay:"日期"}}
+      </picker>
+    </view>
+
+    <view class='time-picker'>
+      <picker class="begin_time" mode="time" bindchange="handleBeginTimeChange">
+        {{beginTimeDisplay ? beginTimeDisplay:"时间"}}
+      </picker>
+    </view>
+
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>结束时间</view>
+
+    <view class='date-picker'>
+      <picker class="end_date" mode="date" bindchange="handleEndDateChange">
+        {{endDateDisplay ? endDateDisplay:"日期"}}
+      </picker>
+    </view>
+
+    <view class='time-picker'>
+      <picker class="end_time" mode="time" bindchange="handleEndTimeChange">
+        {{endTimeDisplay ? endTimeDisplay:"时间"}}
+      </picker>
+    </view>
+
   </view>
 
   <view class='confirmContainer'>

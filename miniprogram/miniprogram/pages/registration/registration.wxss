@@ -1,0 +1,4 @@
+/* miniprogram/pages/registration/registration.wxss */
+.border-input{
+  border:1px solid #ccc;
+}

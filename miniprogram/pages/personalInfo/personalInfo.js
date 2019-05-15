@@ -41,29 +41,37 @@ Page({
     if(newName===''){newName=this.data.userName}
     if(newPhoneNumber===''){newPhoneNumber=this.data.userPhoneNumber}
     if(newEmail===''){newEmail=this.data.userEmail}
-    wx.cloud.init({
-      env: 'jstu-calendar-bcbe6b',
-      traceUser: true
-    });
-    const db = wx.cloud.database();
-    db.collection('userInformation').doc(id).update({
-      data:{
-        userName:newName,
-        userPhoneNumber:newPhoneNumber,
-        userEmail:newEmail
+    wx.showModal({
+      title: '提示',
+      content: '是否修改个人信息',
+      success:function(res){
+        if(res.confirm){
+          wx.cloud.init({
+            env: 'jstu-calendar-bcbe6b',
+            traceUser: true
+          });
+          const db = wx.cloud.database();
+          db.collection('userInformation').doc(id).update({
+            data: {
+              userName: newName,
+              userPhoneNumber: newPhoneNumber,
+              userEmail: newEmail
+            }
+          })
+          wx.showToast({
+            title: '修改成功',
+            icon: 'success',
+            duration: 2000
+          })
+          app.appData.account.userName = newName;
+          app.appData.userInfo.userPhoneNumber = newPhoneNumber;
+          app.appData.userInfo.userEmail = newEmail;
+
+          wx.switchTab({
+            url: '../personalCenter/personalCenter',
+          })
+        }
       }
-    })
-    wx.showToast({
-      title: '修改成功',
-      icon: 'success',
-      duration: 2000
-    })
-    app.appData.account.userName=newName;
-    app.appData.userInfo.userPhoneNumber=newPhoneNumber;
-    app.appData.userInfo.userEmail=newEmail;
-    
-    wx.switchTab({
-      url: '../personalCenter/personalCenter',
     })
   },
 

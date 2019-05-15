@@ -1,12 +1,52 @@
 <!--miniprogram/pages/scheduleDisplay/scheduleDisplay.wxml-->
-<view class='container'>
-  <view class='section'>
-    <view class='section-title'>请选择要查看的周次</view>
-    <picker bindchange='bindPickerChange' value="{{index}}" range="{{array}}">
-      <view class='picker'>
-         当前选择:第{{array[index]}}周
-      </view>
-    </picker>
+<view class='selected_date'>
+  <view bindtap="preMonth">
+    <image class="select_icon" src="../../images/left.png"></image>
+  </view>
+
+  <view class="text_center">{{curYear+'年'+curMonth+'月'}}</view>
+  <view style="text-align:right;" bindtap="nextMonth">
+    <image class="select_icon" src="../../images/right.png"></image>
   </view>
 
 </view>
+
+<view class="calendar_panel">
+
+  <view class="calendar_box">
+    <view class="weekday_label">日</view>
+    <view class="weekday_label">一</view>
+    <view class="weekday_label">二</view>
+    <view class="weekday_label">三</view>
+    <view class="weekday_label">四</view>
+    <view class="weekday_label">五</view>
+    <view class="weekday_label">六</view>
+  </view>
+  <view class="calendar_box" wx:for="{{dateList}}" wx:for-item="week" wx:key="{{index}}">
+    <view class="weekday_label" wx:for="{{week}}" wx:key="{{index}}">
+      <text class="{{item.value==selectedDate?'active_date':''}}" bindtap="selectDate" data-date="{{item}}">{{item.date}}</text>
+    </view>
+  </view>
+
+</view>
+
+<view class='display'>
+  <view  wx:for='{{todoList}}' wx:for-index='i'>
+    <view class='container'>
+      <view style='text-align: center;vertical-align: middle;'>
+        <view>活动名称:{{todoList[i].activityName}}</view>
+        <view>活动地点:{{todoList[i].activitySite}}</view>
+        <view>开始时间:{{todoList[i].beginTimeDisplay}}</view>
+        <view>结束时间:{{todoList[i].endTimeDisplay}}</view>
+      </view>
+
+      <view class='operation'>
+        <image class="select_icon" src="../../images/modify.png"style="width: 20px; height: 20px; margin:0px;" bindtap='modify' data-activityid='{{todoList[i].activityId}}'></image>
+        <text>\t\t</text>
+        <image class="select_icon" src="../../images/delete.png"style="width: 20px; height: 20px; margin:0px;" bindtap='delete' data-activityid='{{todoList[i].activityId}}' data-activityindex='i'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='todo-add' bindtap='handleAddActivity'>+</view>
