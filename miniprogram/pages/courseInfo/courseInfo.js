@@ -1,6 +1,7 @@
 // miniprogram/pages/courseInfo/courseInfo.js
 var app=getApp()
 Page({
+  
 
   /**
    * 页面的初始数据
@@ -96,6 +97,7 @@ Page({
       courseSite:e.detail.value
     })
   },
+  
   addcourse: function(e){
     var that=this;
     var d=that.data;
