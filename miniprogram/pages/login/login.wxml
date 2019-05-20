@@ -1,14 +1,19 @@
 <!--miniprogram/pages/registration/registration.wxml-->
 <view class="container">
-  <text>欢迎使用交大日历</text>
+  <view class="login-icon"> 
+ <image class="login-img" src="/images/loginLog.jpg"></image> 
+ </view>
+ <view class="login-from">  
   <view class='mainListContainer'>
-    <view class='mainListText'>用户名</view>
-    <input class="border-input" placeholder='请输入用户名' maxlength='25' bindinput='bindNameInput'></input>
+   <image class="nameImage" src="/images/name.jpg"></image> 
+  <label class="loginLab">账号</label> 
+    <input class="inputText" placeholder="请输入账号" bindinput='bindNameInput'></input>
   </view>
-
+<view class="line"></view> 
   <view class='mainListContainer'>
-    <view class='mainListText'>密码</view>
-    <input class='border-input' placeholder='请输入密码' password='true' maxlength='14' bindinput='bindPasswordInput'></input>
+    <image class="keyImage" src="/images/key.jpg"></image> 
+  <label class="loginLab">密码</label> 
+    <input class="inputText" placeholder='请输入密码' password='true'  bindinput='bindPasswordInput'></input>
   </view>
 
   <view class='bindingContainer'>
@@ -16,4 +21,5 @@
   </view>
 
   <button class='nextButton' bindtap='registerTap'>注册</button>
+</view>
 </view>

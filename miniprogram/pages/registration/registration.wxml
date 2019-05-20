@@ -1,29 +1,36 @@
 <!--miniprogram/pages/registration/registration.wxml-->
 <view class="container">
-
+ <view class="login-icon"> 
+ <image class="login-img" src="/images/jiaoda.jpg"></image> 
+ </view>
   <view class='mainListContainer'>
-    <view class='mainListText'>用户名</view>
-    <input class="border-input" placeholder='请输入数字,字母或中文' maxlength='25' bindinput='userNameInput'></input>
+    <view class='info'>
+    <input class="info-input" placeholder='请输入用户名' maxlength='25' bindinput='userNameInput'></input>
+    </view>
   </view>
 
   <view class='mainListContainer'>
-    <view class='mainListText'>密码</view>
-    <input class='border-input' placeholder='长度6~14位' password='true' maxlength='14' bindinput='userPasswordInput'></input>
+    <view class='info'>
+    <input class='info-input' placeholder='请输入6~14位密码' password='true' maxlength='14' bindinput='userPasswordInput'></input>
+  </view>
   </view>
 
   <view class='mainListContainer'>
-    <view class='mainListText'>确认密码</view>
-    <input class='border-input' placeholder='请再次输入密码' password='true' maxlength='14' bindinput='userPasswordAgainInput'></input>
+    <view class='info'>
+    <input class='info-input' placeholder='请再次输入密码' password='true' maxlength='14' bindinput='userPasswordAgainInput'></input>
+  </view>
   </view>
 
   <view class='mainListContainer'>
-    <view class='mainListText'>手机号码</view>
-    <input class='border-input' placeholder='请输入11位手机号码' maxlength='11' bindinput='userPhoneNumberInput'></input>
+    <view class='info'>
+    <input class='info-input' placeholder='请输入11位手机号码' maxlength='11' bindinput='userPhoneNumberInput'></input>
+  </view>
   </view>
 
   <view class='mainListContainer'>
-    <view class='mainListText'>邮箱</view>
-    <input class='border-input' placeholder='请输入常用电子邮箱'  bindinput='userEmailInput'></input>
+    <view class='info'>
+    <input class='info-input' placeholder='请输入常用电子邮箱'  bindinput='userEmailInput'></input>
+  </view>
   </view>
 
   <view class='bindingContainer'>

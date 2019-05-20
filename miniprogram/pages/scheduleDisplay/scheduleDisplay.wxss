@@ -67,8 +67,8 @@
   height: 280rpx;
   line-height: 55rpx;
   
-  
-  /* background-color: #090; */
+
+  background-color:burlywood; 
   margin: 20rpx;
   border: 5rpx solid #EEE;
   border-radius: 10rpx;

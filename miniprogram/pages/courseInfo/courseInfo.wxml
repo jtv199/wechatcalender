@@ -1,57 +1,42 @@
 <!--miniprogram/pages/courseInfo/courseInfo.wxml-->
 <view class='container'>
   <form bindsubmit="addcourse">
-    <view class='section'>
-      <view class='section-title'>课程名称</view>
-      <input class="border-input" bindinput='courseNameInput'></input>
-    </view>
+   <view class='section'>
+     <view class='section-title'>课程名称</view>
+     <input class="border-input" bindinput='courseNameInput'></input>
+   </view>
 
-    <view class='section'>
-      <view class='section-title'>课程地点</view>
-      <input class="border-input" bindinput='courseSiteInput'></input>
-    </view>
-    <view class='section'>
-      <!-- <radio-group bindchange='setweekday'>
-        <label>
-          <radio value='1' />星期一</label>
-        <label>
-          <radio value='2' />星期二</label>
-        <label>
-          <radio value='3' />星期三</label>
-        <label>
-          <radio value='4' />星期四</label>
-        <label>
-          <radio value='5' />星期五</label>
-      </radio-group> -->
-
-      <!-- new radio for setting weekday -->
-      <radio-group class="radio-group" bindchange="setweekday">
-        <label class="radio" wx:for="{{weekdays}}" wx:key="" class="{{weekday == item.value ? 'bc_green white': 'green'}}">
-          <radio value="{{item.value}}" checked="{{item.checked}}" /> {{item.title}}
-        </label>
-      </radio-group>
-      <view class="debug">你选择的值是: {{weekday}}</view>
-
-      <view class="section-title">课程周次</view>
-     <radio-group class="radio-group" bindchange="setweeks">
-  <label class="radio" wx:for="{{weekselection}}" wx:key="" class="{{weekselected == item.value ? 'bc_green white': 'green'}}">
-    <radio value="{{item.value}}" checked="{{item.checked}}" />
-    {{item.title}}
-  </label>
-</radio-group>
-<view class = "debug">你选择的值是: {{weekselected}}</view>
+   <view class='section'>
+     <view class='section-title'>课程地点</view>
+     <input class="border-input" bindinput='courseSiteInput'></input>
+   </view>
+   <view class='section'>
+     <radio-group bindchange='setweekday'>
+      <label><radio value='1'/>星期一</label>
+      <label><radio value='2'/>星期二</label>
+      <label><radio value='3'/>星期三</label>
+      <label><radio value='4'/>星期四</label>
+      <label><radio value='5'/>星期五</label>
+     </radio-group>
+     <view class="section-title">课程周次</view>
+     <radio-group bindchange='setweeks'>
+      <label><radio  value='all'/>全部</label>
+      <label><radio  value='odd'/>单周</label>
+      <label><radio  value='even'/>双周</label>
+      <label><radio  value='own'/>特殊</label>
+     </radio-group>
      <checkbox-group name='checkbox'>
-        <block wx:for="{{weeks}}" wx:for-index='idx'>
-          <checkbox value='{{item}}' checked='{{item}}'>{{idx+1}}</checkbox>
-        </block>
-      </checkbox-group>
-      <view class='section-title'>开始时间</view>
-      <picker bindchange='bt' value='begin1' range='{{begintime}}'>当前选择:{{begin1}}</picker>
-      <view class='section-title'>结束时间</view>
-      <picker bindchange='et' value='end1' range='{{endtime}}'>当前选择:{{end1}}</picker>
-    </view>
-    <view class='section'>
+       <block wx:for="{{weeks}}" wx:for-index='idx'>
+        <checkbox value='{{item}}' checked='{{item}}'>{{idx+1}}</checkbox>
+       </block>
+     </checkbox-group>
+     <view class='section-title'>开始时间</view>
+     <picker bindchange='bt' value='begin1' range='{{begintime}}'>当前选择:{{begin1}}</picker>
+     <view class='section-title'>结束时间</view>
+     <picker bindchange='et' value='end1' range='{{endtime}}'>当前选择:{{end1}}</picker>
+     </view>
+     <view class='section'>
       <button type='warn' formType='submit' plain>Submit</button>
-    </view>
+      </view>
   </form>
 </view>

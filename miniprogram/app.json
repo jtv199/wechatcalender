@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/courseInfo/courseInfo",
     "pages/login/login",
     "pages/registration/registration",
     "pages/index/index",
@@ -8,6 +7,7 @@
     "pages/activityManagement/activityManagement",
     "pages/courseManagement/courseManagement",
     "pages/showcourse/showcourse",
+    "pages/courseInfo/courseInfo",
     "pages/modifycourse/modifycourse",
     "pages/activityInfo/activityInfo",
     "pages/campusActivity/campusActivity",

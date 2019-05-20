@@ -1,23 +1,24 @@
 <!--miniprogram/pages/personalInfo/personalInfo.wxml-->
 <view class='container'>
-  <view class='title'>
-    <text>个人信息</text>
+  <view class="login-icon"> 
+ <image class="login-img" src="/images/loginLog.jpg"></image> 
+ </view>
+<view class="login-from"> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>用户名</label>
+    <input class="inputText" placeholder='{{userName}}' maxlength='25' bindinput='newNameInput'></input>
   </view>
-
-  <view class='section'>
-    <view class='section-title'>用户名</view>
-    <input class="border-input" placeholder='{{userName}}' maxlength='25' bindinput='newNameInput'></input>
+<view class="line"></view> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>电话号码</label>
+    <input class="inputText" placeholder='{{userPhoneNumber}}' maxlength='11' bindinput='newPhoneNumberInput'></input>
   </view>
-
-  <view class='section'>
-    <view class='section-title'>电话号码</view>
-    <input class="border-input" placeholder='{{userPhoneNumber}}' maxlength='11' bindinput='newPhoneNumberInput'></input>
-  </view>
-
-  <view class='section'>
-    <view class='section-title'>电子邮箱</view>
-    <input class="border-input" placeholder='{{userEmail}}' maxlength='25' bindinput='newEmailInput'></input>
+<view class="line"></view> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>电子邮箱</label>
+    <input class="inputText" placeholder='{{userEmail}}' maxlength='25' bindinput='newEmailInput'></input>
   </view>
 
   <button class='modify' bindtap='modifyPersonalInfo'>保存</button>
+</view>
 </view>

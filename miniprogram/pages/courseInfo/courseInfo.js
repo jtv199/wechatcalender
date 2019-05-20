@@ -1,7 +1,6 @@
 // miniprogram/pages/courseInfo/courseInfo.js
 var app=getApp()
 Page({
-  
 
   /**
    * 页面的初始数据
@@ -27,38 +26,9 @@ Page({
     endtime1:{'9:40':2,'11:40':4,'13:40':6,'15:40':8,'17:40':10,'19:40':12,'20:30':13},
     begintime: ['8:00', '10:00', '12:00', '12:55', '14:00', '16:00', '18:00'],
     endtime: ['9:40', '11:40', '13:40', '15:40', '17:40', '19:40', '20:30'],
-    theweek:[],
-
-    // radio weekday code
-    weekdays: [
-      { value: '1', title: '星期一' },
-      { value: '2', title: '星期二', checked: 'true' },
-      { value: '3', title: '星期三' },
-      { value: '4', title: '星期四' },
-      { value: '5', title: '星期五' },
-    ],
-    weekday: '2',
-
-    weekselection: [
-      { value: 'all', title: '全部' },
-      { value: 'odd', title: '单周', checked: 'true' },
-      { value: 'even', title: '双周' },
-      { value: 'own', title: '特殊' },
-    ],
-    weekselected: 'odd'
-    
-    
+    theweek:[]
     
   },
-
-  //weekday code
-  setweekday: function (e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
-    this.setData({
-      weekday: e.detail.value
-    });
-  },
-
   bt:function(e){
     var k=e.detail.value;
     this.setData({
@@ -81,9 +51,6 @@ Page({
   setweeks:function(e){
     console.log(e.detail);
     var k=e.detail.value;
-    this.setData({
-      weekselected: e.detail.value
-    });
     if (k=='all'){
       this.setData({
         weeks:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
@@ -129,7 +96,6 @@ Page({
       courseSite:e.detail.value
     })
   },
-  
   addcourse: function(e){
     var that=this;
     var d=that.data;

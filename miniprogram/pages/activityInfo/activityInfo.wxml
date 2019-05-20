@@ -1,24 +1,29 @@
 <!--miniprogram/pages/activityInfo/activityInfo.wxml-->
 <view class='container'>
-  <view class='section'>
-    <view class='section-title'>活动名称</view>
-    <input class="border-input" bindinput='activityNameInput'></input>
+<view class="login-icon"> 
+ <image class="login-img" src="/images/loginLog.jpg"></image> 
+ </view>
+ <view class="login-from"> 
+ <view class="line"></view>  
+  <view class='mainListContainer'>
+    <label class='loginLab'>活动名称</label>
+    <input class="inputText" bindinput='activityNameInput'></input>
   </view>
-
-  <view class='section'>
-    <view class='section-title'>活动地点</view>
-    <input class="border-input" bindinput='activitySiteInput'></input>
+<view class="line"></view> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>活动地点</label>
+    <input class="inputText" bindinput='activitySiteInput'></input>
   </view>
-
-  <view class='section'>
-    <view class='section-title'>开始时间</view>
-
+<view class="line"></view> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>开始时间</label>
+<view class="line"></view> 
     <view class='date-picker'>
       <picker class="begin_date" mode="date" bindchange="handleBeginDateChange">
         {{beginDateDisplay ? beginDateDisplay:"日期"}}
       </picker>
     </view>
-
+<view class="line"></view> 
     <view class='time-picker'>
       <picker class="begin_time" mode="time" bindchange="handleBeginTimeChange">
         {{beginTimeDisplay ? beginTimeDisplay:"时间"}}
@@ -26,16 +31,16 @@
     </view>
 
   </view>
-
-  <view class='section'>
-    <view class='section-title'>结束时间</view>
-
+<view class="line"></view> 
+  <view class='mainListContainer'>
+    <label class='loginLab'>结束时间</label>
+<view class="line"></view> 
     <view class='date-picker'>
       <picker class="end_date" mode="date" bindchange="handleEndDateChange">
         {{endDateDisplay ? endDateDisplay:"日期"}}
       </picker>
     </view>
-
+<view class="line"></view> 
     <view class='time-picker'>
       <picker class="end_time" mode="time" bindchange="handleEndTimeChange">
         {{endTimeDisplay ? endTimeDisplay:"时间"}}
@@ -43,9 +48,10 @@
     </view>
 
   </view>
-
+<view class="line"></view> 
   <view class='confirmContainer'>
     <button class='confirm' bindtap='addingSuccessTap'>添加活动</button>
   </view>
 
+</view>
 </view>
