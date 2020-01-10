@@ -33,6 +33,7 @@ Activities management UML diagram/ 活动管理包类图
 Sequence diagram/ 活动管理包类图
 ---
 ![Imgur](https://i.imgur.com/pTj8w6z.png)
+![Imgur](https://i.imgur.com/RXwaWfC.png)
 
 How to store activities and classes / 课程和活动各自的时间保存方式
 ---
