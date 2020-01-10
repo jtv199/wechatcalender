@@ -28,20 +28,16 @@ Adapters UML diagram/ 用户接口类图
 
 Activities management UML diagram/ 活动管理包类图
 ---
-![UML](https://i.imgur.com/tvreSmk.png)
-
-Activities management UML diagram/ 添加课程时序图
----
-![UML](https://i.imgur.com/tvreSmk.png)
+![Imgur](https://i.imgur.com/jPQ3H1N.png)
 
 Sequence diagram/ 活动管理包类图
 ---
-![UML](https://i.imgur.com/tvreSmk.png)
+![Imgur](https://i.imgur.com/pTj8w6z.png)
 
 How to store activities and classes / 课程和活动各自的时间保存方式
 ---
 
-The main difference between how activities and classes are stored is the date formate
+The main difference between how activities and classes are stored is the date formate. Classes have the period, weekday, and week numbers. While activities have date, start and end time. For speed of retrieval, classes and activities are stored in weeks.
 
 
 课程和活动主要区分在于时间的格式。课程时间包含课时（第几节），星期几和周次。而活动则包含日期、开始时间、结束时间（具体到分）（这是课程表和日程表显示的格式不同所致）。为了能够快速得到各周的所有课程，我们对同一门课程每一周都进行了一次保存。这样可以快速查询出每周的所有课程。而对于日期，我们对日期和时间进行了两种形式的保存，一种是字符串形式（2019-1-1、10：30），这种格式用于显示。而另一种是转为int型（20190101、1030）这种格式便于查询和判断时间冲突。
