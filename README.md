@@ -1,16 +1,31 @@
-WeChat calender
+# WeChat calender
+
 <a name="introduction"></a>
-_Shanghai Jiao Tong alender_ is a calender mini-app for WeChat, works inside the WeChat app. Built for Shanghai Jiao Tong university's club system.
+_Shanghai Jiao Tong calender_ is a calender mini-app for WeChat, works inside the WeChat app. Built for Shanghai Jiao Tong university's club system.
 
 Functionalities include:
 - Class management: User is able to add, modify, delete and display their class schedules and details.
 - Activities management: User is able to add, modify, delete, set notifications, follow clubs and display their club activities.
 - User customisation : User is able to individualise their personal info, navigation and other details.
 
-# Table of Contents
+## Table of Contents
 1. [Introduction](#introduction)
 2. [Chinese introduction](#chinese-introduction)
 3. [App demonstration](#demonstration)
+    1. Registering
+    2. Login
+    3. Create activity
+    4. Modify/ delete activity
+    5. View daily events
+    6. Follow popular events
+    7. View/ delete followed events
+    8. Publish events
+    9. Publish excursions
+    10. Display daily schedule
+    11. Edit personal info
+    12. Receive notification
+    13. Intergrated Tencent navigation
+    14. Logout
 3. Technical diagrams / 类图
     1. [Use case diagram / 用例图](#usecase)
     2. [Adapters UML diagram/ 用户接口类图](#adapters)
@@ -32,7 +47,36 @@ App demonstration
 ----
 <a name="demonstration"></a>
 
+#### Registering
 
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_register.gif?raw=true)
+
+#### Login
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_login.gif)
+#### Create activity
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_new_activity.gif)
+#### Modify/ delete activity
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_modify_delete_activity.gif)
+#### View daily events
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_view_dayily_event.gif)
+#### Follow popular events
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_follow_popular_events.gif)
+#### View/ delete followed events
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_view_delete_followe_event.gif)
+#### Publish events
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_publish_event.gif)
+#### Publish excursions
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_publish_excursion.gif)
+#### Display daily schedule
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_display_daily_schedule.gif)
+#### Edit personal info
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_edit_personal.gif)
+#### Receive notification
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_wechat_notification.gif)
+#### Intergrated Tencent navigation
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_intergrated_tecent_map.gif)
+#### Logout
+![](https://github.com/jtv199/wechatcalender/blob/v1/wechat_github/wechat_logout.gif)
 
 Use case diagram / 用例图
 ---
