@@ -1,3 +1,4 @@
+<img src="https://github.com/jtv199/wechatcalender/blob/v1/images/sjtulogo.png" width="64">
 # WeChat calender
 
 <a name="introduction"></a>
